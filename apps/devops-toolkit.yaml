@@ -5,8 +5,6 @@ metadata:
   name: devops-toolkit-staging
   namespace: flux-system
 spec:
-  rollback:
-    enable: true
   chart:
     spec:
       chart: helm
@@ -14,13 +12,13 @@ spec:
         kind: GitRepository
         name: devops-toolkit
   test:
-    enable: true
+    enable: false
     ignoreFailures: false
   interval: 30s
   targetNamespace: staging
   values:
     image:
-      tag: 2.9.17
+      tag: 2.9.9
     ingress:
       host: staging.devops-toolkit.10.193.40.81.nip.io
 
