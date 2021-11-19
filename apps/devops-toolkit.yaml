@@ -12,7 +12,7 @@ spec:
         kind: GitRepository
         name: devops-toolkit
   test:
-    enable: false
+    enable: true
     ignoreFailures: false
   upgrade:
     remediation:
@@ -21,7 +21,7 @@ spec:
   targetNamespace: staging
   values:
     image:
-      tag: 2.9.9
+      tag: 2.9.17
     ingress:
       host: staging.devops-toolkit.10.193.40.81.nip.io
 
