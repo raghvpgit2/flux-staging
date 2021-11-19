@@ -5,6 +5,8 @@ metadata:
   name: devops-toolkit-staging
   namespace: flux-system
 spec:
+  rollback:
+    enable: true
   chart:
     spec:
       chart: helm
